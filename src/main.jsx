@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 import Addproduct from './components/Addproduct.jsx';
 import Updateproduct from './components/Updateproduct.jsx';
-import Signin from './shared/signin.jsx';
+import Signin from './shared/Signin.jsx';
 import Signup from './shared/Signup.jsx';
 import Authentication from './Authentication.jsx';
 import Products from './components/Products.jsx';
