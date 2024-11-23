@@ -45,7 +45,7 @@ const Signup = (props) => {
             }
         } ) */
         if(emails.includes(email)){
-            console.log("User already exist")
+            Swal.fire("User already exist");
         }else{
             fetch("https://aladin-ashy.vercel.app/user",{
                 method:"POST",

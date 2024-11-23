@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import Swal from 'sweetalert2'
+import { AuthContext } from '../Authentication';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 
 const Addproduct = (props) => {
+    const navigate = useNavigate()
+    const {user} = useContext(AuthContext)
     
+    /* useEffect(()=>{
+        navigate("/")
+    },[user]) */
     const handleAdditem = (e) =>{
             e.preventDefault()
             

@@ -30,7 +30,7 @@ const router = createBrowserRouter([
       {
         path: "/updateproduct/:id",
         element: <Updateproduct></Updateproduct>,
-        loader: (params)=> fetch(`https://aladin-ashy.vercel.app/product/${params.id}`)
+        loader: ({params})=> fetch(`https://aladin-ashy.vercel.app/product/${params.id}`) 
       },
       {
         path: "/signin",

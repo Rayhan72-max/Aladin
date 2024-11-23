@@ -10,13 +10,13 @@ const Productcard = ({ product,newProducts,setproducts }) => {
     }
 
     const handleDelete = (id) => {
-        console.log(id)
+        
         fetch(`https://aladin-ashy.vercel.app/product/${id}`, {
         method: "DELETE"})
         .then(res => res.json())
         .then((data) =>
             {if(data.deletedCount>0){
-            console.log("delete is working")
+            
             const remaining = newProducts.filter(pro=> pro._id !== id )
              setproducts(remaining);     
         }})
@@ -26,7 +26,8 @@ const Productcard = ({ product,newProducts,setproducts }) => {
 
     return (
         <div className='flex gap-2 justify-around items-center bg-rose-50 p-4'>
-            <img src={product.photo_url} alt="" />
+            <div><img src={product.photo_url} alt="" /></div>
+            
             <div>
                 <h1>{product.name}</h1>
                 <p>{product.details}</p>
