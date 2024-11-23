@@ -8,7 +8,7 @@ const Products = (props) => {
     const [newProducts,setproducts]= useState(products)
     return (
       <div>  
-      <div className='grid grid-cols-2 gap-4'>
+      <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 '>
       {newProducts.map(product=>
       <Productcard product={product}  newProducts={newProducts}
       setproducts={setproducts}></Productcard>)}      
